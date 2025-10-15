@@ -1,12 +1,19 @@
 # Markdown
+
 ## Subtitulo 1
+
 ### Subtitulo 2
+
 * **Documentación en Github**
 * Ecuaciones!
-    * En Notebook de python
+
+  * En Notebook de python
+
 * Viñeta 1
 * Viñeta 2
-# Documentar en lenguaje de *programación*
+
+## Documentar en lenguaje de *programación*
+
 ``` python
 def suma(x1:int, x2:int):
     return x1 + x2
@@ -16,15 +23,20 @@ def suma(x1:int, x2:int):
 function y = suma(x1, x2)
     y = x1+ x2;
 ```
-# Micelánea
+
+## Micelánea
+
 * Cambia distribución de teclado
 windows + spacio
 
-# Redacción de ecuaciones en Markdown 
+## Redacción de ecuaciones en Markdown
+
 Comando para previsualizar: ctrl+shift+v
 
-# Ejemplo
-Fórmula para calcular las raices de la ecuación cuadrática. 
+## Ejemplo
+
+Fórmula para calcular las raices de la ecuación cuadrática.
+
 $x_1= (-b + \sqrt{b^2 -4ac})/2a $
 
 $x_1= \frac{-b + \sqrt{b^2 -4ac}}{2a} $
@@ -33,7 +45,8 @@ $x_2= \frac{-b - \sqrt{b^2 -4ac}}{2a} $
 
 $\pi,\alpha,\beta, \hat{y}, \leftarrow$
 
-# Ejercicio
+## Ejercicio
+
 Escribir la ecuación Navier Stokes.
 
 $\rho \partial$
@@ -49,13 +62,14 @@ Hay que subirlo al taller.
 $\rho \frac{D \overrightarrow{V}}{Dt} = $
 $\nabla p + \mu \nabla^2 \overrightarrow{V} + \rho \overrightarrow{g} $
 
+## Taller
 
-# Taller!
 * Se debe presentar:
-    * Notebook
-    * Enlace al repositorio
+  * Notebook
+  * Enlace al repositorio
 
 ## Ejercicio 1
+
 La sumatoria $1 + 1/2 + 1/4 +1/8 ... $ tal que el error absoluto $e_{abs} < 10^{-1}$.
 
 ``` python
@@ -100,15 +114,16 @@ print("===============================")
 ![XSDF](.\E2.png) -->
 
 ### Corrida de escritorio
+
 $v_1=[3, 2, 5, 8, 4, 1]$
 
 | i | Vector |
 | -- | -- |
 | 0 | $ [3, 2, 5, 8, 4, 1] $ |
-| 1 | $ [3, 2, 5, 4, 1, 8] $|
-| 2 | $ [3, 2, 4, 1, 5, 8] $|
-| 3 | $ [3, 2, 1, 4, 5, 8] $|
-...
+| 1 | $ [3, 2, 5, 4, 1, 8] $ |
+| 2 | $ [3, 2, 4, 1, 5, 8] $ |
+| 3 | $ [3, 2, 1, 4, 5, 8] $ |
+| ... | ... |
 
 Resultado final:
 
@@ -140,6 +155,7 @@ print("\nVECTOR ORDENADO:", v1)
 ```
 
 Casos de prueba:
+
 * $v_2=[-1, 0, 4, 5, 6, 7]$
 
 ``` python
@@ -168,6 +184,7 @@ print("\nVECTOR ORDENADO:", v2)
 ```
 
 * $v_3$ 100_000 número aleatorios entre -200 y 145.
+
 ``` python
 # Ejercicio 2.3 (v3)
 import random
@@ -203,7 +220,8 @@ print("Primeros 10 elementos ordenados:", v3[:10])
 print("Últimos 10 elementos ordenados:", v3[-10:])
 ```
 
-# Algoritmo 3
+## Algoritmo 3
+
 ![XSDF](.\fibonacci.png)
 
 | n | fib(n) |
@@ -241,12 +259,12 @@ for n in [11, 84, 1531]:
     print(f"fib({n}) = {fibonacci_iterativo(n)}")
 ```
 
-## Graficar!
+## Graficar
+
 * El valor de la serie $fib(n)$
-* El valor del cociente 
+* El valor del cociente
 
     $\phi \rightarrow \frac{fib(n)} {fib(n-1)} \approx 1.618$ número áureo.
-
 
 | n | $ fib(n) /fib(n-1) $ |
 | -- | -- |
@@ -304,27 +322,38 @@ plt.legend()
 plt.show()
 ```
 
-# Breve revisión *git*
+## Breve revisión *git*
+
 * Inicializar repositorio
+
 ``` bash
 git init 
 ```
+
 * ¿Qué significa la U?
-    * No están añadidos
-    * Se añaden con
+  * No están añadidos
+  * Se añaden con
+
     ``` bash
     git add file1 file2... 
     ```
-    * Nunca!  Añade **TODO**!
+
+* Nunca!  Añade **TODO**!
+
     ``` bash
     git add . 
     ```
-    * git commit
+
+* git commit
+
     ``` bash
     git commit -m "actualización de código" 
     ```
-# Modificación del Algoritmo 2
+
+## Modificación del Algoritmo 2
+
 Modifique el Algoritmo 02 y determine el número de comparaciones realizadas al ordenar la serie 5, 4, 3, 2, 1
+
 ``` python
 v1 = [3, 2, 5, 4, 1]
 n = len(v1)
@@ -351,8 +380,11 @@ for i in range(n):
 print("\nVECTOR ORDENADO:", v1)
 print("Número de comparaciones realizadas:", comparaciones)
 ```
-# Usando el Algoritmo 03 y la aritmética de redondeo con 3 cifras
+
+## Usando el Algoritmo 03 y la aritmética de redondeo con 3 cifras
+
 Determine la iteración desde la cual el error relativo de $\frac{y_{i-1}}{y_i} \quad (i > 0) $ con respecto a $\frac{1 + \sqrt{5}} {2} $ está dentro de $10^{-5} $
+
 ``` python
 def FL_rounding(x, digits=3):
     """Redondeo a 'digits' cifras significativas para float"""
@@ -394,15 +426,15 @@ for n in valores_n:
     fib_n, ratio, iter_error = fibonacci_iterativo_FL_seguro(n, digits=3)
     print(f"{n} | {fib_n} | {ratio} | {iter_error}")
 ```
-# Algoritmo 4
+
+## Algoritmo 4
+
 Implemente la serie geométrica $\sum_{n=1}^{inf} $ $\frac{1}{n} $
 A qué valor converge?
 El Algoritmo 04 implementa la serie armónica, no converge: diverge y su suma tiende a +∞
+
 ``` python
 import matplotlib.pyplot as plt
-
-# Algoritmo 04 - Serie armónica con gráfica
-# Suma parcial de 1 + 1/2 + 1/3 + ... + 1/n
 
 # Número de términos
 N = int(input("Ingrese el número de términos N: "))
@@ -427,5 +459,6 @@ plt.grid(True)
 plt.legend()
 plt.show()
 ```
+
 **Link repositorio**
-[github_TamyBenavidez]()
+[github_TamyBenavidez](https://github.com/TamyBenavidez/Python.git), Taller N°1
