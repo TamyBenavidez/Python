@@ -1,0 +1,98 @@
+% Plantilla definitiva LaTeX en español para WSL/Jupyter con TeX Live 2025
+\documentclass[12pt]{article}
+
+% Paquetes básicos
+\usepackage[main=spanish]{babel}   % Idioma español
+\usepackage[utf8]{inputenc}        % Codificación UTF-8
+\usepackage[T1]{fontenc}           % Codificación de fuentes
+\usepackage{lmodern}               % Fuente moderna
+\usepackage{graphicx}              % Para incluir imágenes
+\usepackage{amsmath, amssymb}      % Matemáticas
+\usepackage{hyperref}              % Hipervínculos
+\usepackage{geometry}              % Márgenes
+\geometry{margin=2.5cm}
+\usepackage{caption}               % Configuración de captions
+\usepackage{float}                 % Posicionamiento de figuras y tablas
+\usepackage{xcolor}                % Colores para listings
+\usepackage{listings}              % Bloques de código
+
+% Configuración de listings para Python
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny,
+    frame=single,
+    breaklines=true
+}
+
+% Información del documento
+\title{Título del Documento}
+\author{Tu Nombre}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Resumen breve del documento.
+\end{abstract}
+
+\section{Introducción}
+Texto de introducción en español. Puedes incluir listas, ecuaciones y referencias.
+
+\subsection{Lista de ejemplo}
+\begin{itemize}
+    \item Primer elemento
+    \item Segundo elemento
+    \item Tercer elemento
+\end{itemize}
+
+\subsection{Ecuación de ejemplo}
+\begin{equation}
+E = mc^2
+\end{equation}
+
+\section{Figura de ejemplo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{Algoritmo1.png} % Cambia por tu imagen
+    \caption{Ejemplo de figura}
+    \label{fig:ejemplo}
+\end{figure}
+
+\section{Tabla de ejemplo}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        A & B & C \\
+        \hline
+        1 & 2 & 3 \\
+        4 & 5 & 6 \\
+        \hline
+    \end{tabular}
+    \caption{Ejemplo de tabla}
+    \label{tab:ejemplo}
+\end{table}
+
+\section{Codigo en Python}
+\begin{lstlisting}
+# Codigo Python de ejemplo
+import numpy as np
+
+x = np.linspace(0, 10, 100)
+y = np.sin(x)
+
+print(y)
+\end{lstlisting}
+
+\section{Conclusión}
+Conclusiones finales del documento.
+
+\end{document}
